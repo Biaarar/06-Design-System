@@ -24,9 +24,9 @@ jobs:
       - name: Deploy storybook
         working-directory: ./packages/docs
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx storybook-to-ghpages \
             --ci \
             --existing-output-dir=storybook-static \
-            --git-remote=https://${GH_TOKEN}@github.com/Biaarar/06-Design-System.git \
+            --git-remote=https://${GH_TOKEN}@github.com/Biaarar/06-Design-System.git
